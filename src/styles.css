@@ -1,1 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+.input-block {
+  margin-top: 10px;
+  border: 2px solid #f2f4f5;
+  background: #f2f4f5;
+  border-radius: 4px;
+  width: 220px;
+}
+
+.input-label {
+  font-size: 12px;
+  color: #999;
+}
+
+.input-value {
+  font-size: 17px;
+  color: #222;
+  background: #f2f4f5;
+  transition: background .4s ease;
+  border-radius: 4px;
+  border-width: 0;
+  outline: none;
+}
+
+button {
+  margin-top: 10px;
+  width: 220px;
+  background: rgb(255, 65, 20);
+  color: rgb(255, 255, 255);
+  height: 48px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  transition-timing-function: ease;
+  transition-duration: 0.4s;
+  transition-property: background;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+button:disabled {
+  background: rgb(255, 65, 20);
+  color: rgb(95, 82, 82);
+  cursor: default;
+}
+
+button:hover {
+  background: rgb(247, 47, 0);
+}
+
+.error-text {
+  color: red;
+}
+
+body, html {
+  font-family: Graphik,sans-serif
+}
+
+.card {
+  border-width: 1px;
+  border-radius: 4px;
+  border-style: solid;
+  padding: 10px;
+  display: inline-block;
+  border-color: rgb(234, 234, 234);
+  horiz-align: center;
+}
+
+h3 {
+  text-align: center;
+}

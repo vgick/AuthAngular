@@ -1,0 +1,38 @@
+<form class="card" [formGroup]="form" (ngSubmit)="login()">
+  <h3>Авторизоваться</h3>
+  <div class="input-block">
+    <div class="input-label">
+      Логин
+    </div>
+    <div>
+      <input
+        type="text"
+        [(ngModel)]="userLogin"
+        class="input-value"
+        appFocusBackgroundColor
+        formControlName="login"
+        placeholder="Имя пользователя" />
+    </div>
+    <small *ngIf="form.get('login').touched && form.get('login').invalid" class="error-text">введите логин</small>
+  </div>
+
+  <div class="input-block">
+    <div class="input-label">
+      Пароль
+    </div>
+      <input
+        type="password"
+        [(ngModel)]="userPassword"
+        class="input-value"
+        appFocusBackgroundColor
+        formControlName="password"
+        placeholder="пароль" />
+      <small *ngIf="form.get('password').touched && form.get('password').invalid" class="error-text">введите пароль</small>
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">Авторизоваться</button>
+
+  <div *ngIf="(!firstAttempt)">
+    <small class="error-text">Сочетание логин/пароль не найдено.</small>
+  </div>
+</form>
